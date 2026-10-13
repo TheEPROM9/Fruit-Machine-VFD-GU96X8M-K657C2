@@ -1,0 +1,167 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:arduino
+LIBS:Fruit_VFD_CPU_Power-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Battery_Cell BT1
+U 1 1 60E978C3
+P 1250 2400
+F 0 "BT1" H 1350 2500 50  0000 L CNN
+F 1 "4.2V Lithium Cell" H 1350 2400 50  0000 L CNN
+F 2 "Battery_Holders:Keystone_1042_1x18650" V 1250 2460 50  0001 C CNN
+F 3 "" V 1250 2460 50  0001 C CNN
+	1    1250 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x24 IC1
+U 1 1 60E97B79
+P 3800 2050
+F 0 "IC1" H 3800 3250 50  0000 C CNN
+F 1 "Arduino Pro Micro" H 3800 750 50  0000 C CNN
+F 2 "Housings_DIP:DIP-24_W15.24mm_Socket_LongPads" H 3800 2050 50  0001 C CNN
+F 3 "" H 3800 2050 50  0001 C CNN
+	1    3800 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x06 J1
+U 1 1 60E97BEF
+P 6200 2450
+F 0 "J1" H 6200 2750 50  0000 C CNN
+F 1 "Conn To VFD" H 6200 2050 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x06_Pitch2.54mm" H 6200 2450 50  0001 C CNN
+F 3 "" H 6200 2450 50  0001 C CNN
+	1    6200 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 1300 6000 2250
+Wire Wire Line
+	4700 2250 4700 2750
+Wire Wire Line
+	4700 2750 6000 2750
+Wire Wire Line
+	1250 2650 6000 2650
+Wire Wire Line
+	1250 2650 1250 2500
+Wire Wire Line
+	1250 2500 2250 2500
+Wire Wire Line
+	2250 2500 2250 1200
+NoConn ~ 5000 2250
+NoConn ~ 4900 2250
+NoConn ~ 4800 2250
+NoConn ~ 4600 2250
+NoConn ~ 4500 2250
+NoConn ~ 4400 2250
+NoConn ~ 4300 2250
+NoConn ~ 4200 2250
+NoConn ~ 4100 2250
+NoConn ~ 4000 2250
+NoConn ~ 3900 2250
+NoConn ~ 3800 2250
+NoConn ~ 3700 2250
+NoConn ~ 3600 2250
+NoConn ~ 3500 2250
+NoConn ~ 3400 2250
+NoConn ~ 2700 2250
+$Comp
+L Conn_01x04 VR1
+U 1 1 60E989E3
+P 2250 1000
+F 0 "VR1" H 2250 1200 50  0000 C CNN
+F 1 "DC-DC 12v Boost" H 2250 700 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x04_Pitch2.54mm" H 2250 1000 50  0001 C CNN
+F 3 "" H 2250 1000 50  0001 C CNN
+	1    2250 1000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6000 1300 2450 1300
+Wire Wire Line
+	2450 1300 2450 1200
+Wire Wire Line
+	2150 1300 2150 1200
+Wire Wire Line
+	2250 1200 2350 1200
+Wire Wire Line
+	3000 2650 3000 2250
+Connection ~ 3000 2650
+NoConn ~ 2800 2250
+NoConn ~ 2900 2250
+Wire Wire Line
+	6000 2350 3300 2350
+Wire Wire Line
+	3300 2350 3300 2250
+Wire Wire Line
+	6000 2450 3200 2450
+Wire Wire Line
+	3200 2450 3200 2250
+Wire Wire Line
+	3100 2250 3100 2550
+Wire Wire Line
+	3100 2550 6000 2550
+$Comp
+L SW_DIP_x01 SW1
+U 1 1 60E9ECDE
+P 1250 1850
+F 0 "SW1" H 1250 2000 50  0000 C CNN
+F 1 "Power Switch" H 1250 1700 50  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_CuK_OS102011MA1QN1_SPDT_Angled" H 1250 1850 50  0001 C CNN
+F 3 "" H 1250 1850 50  0001 C CNN
+	1    1250 1850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1250 2200 1250 2150
+Wire Wire Line
+	1250 1550 1250 1300
+Wire Wire Line
+	1250 1300 2150 1300
+$EndSCHEMATC
